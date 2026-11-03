@@ -15,7 +15,7 @@ This repository contains the end-to-end data science pipeline built to test this
 To transform raw historical customer and transaction logs into predictive features, the following pipeline was executed:
 * Price Volatility Metrics: Derived price variations between December and January for variable and fixed energy tiers (off_peak, peak, mid_peak). Calculated annual mean and maximum monthly price spreads to capture macro price shocks.
   * Temporal & Contract Features:Transformed key calendar dates (date_activ, date_end, date_modif_prod, date_renewal) into duration metrics (e.g., contract tenure in years, months to renewal).
-  * Skewness Correction: Applied logarithmic transformation ($\log_{10}(x + 1)$) to heavily right-skewed variables (such as 12-month energy consumption and forecast metrics) to reduce outlier distortion.
+  * Skewness Correction: Applied logarithmic transformation (log_{10}(x + 1)) to heavily right-skewed variables (such as 12-month energy consumption and forecast metrics) to reduce outlier distortion.
   * Categorical Encoding: Applied binary encoding to boolean features (has_gas) and one-hot encoding to categorical indicators (channel_sales, origin_up), filtering out infrequent categories to prevent matrix sparsity.
  
 ## Model Training and Key Findings
